@@ -1,0 +1,61 @@
+{
+  "blocks": {
+    "breadcrumbs": [],
+    "btn": [],
+    "burger": [],
+    "close": [],
+    "cookie-popup": [],
+    "embed-responsive": [],
+    "form": [],
+    "logo": [],
+    "main-nav": [],
+    "page": [],
+    "page-footer": [],
+    "page-header": [],
+    "pagination": [],
+    "scroll-link": [],
+    "sprite-svg": [],
+    "table": [],
+    "table-mobile-scroll": [],
+    "table-responsive": [],
+    "typo": [],
+    "page-404": [],
+    "service-card": [],
+    "social": [],
+    "banner-index": [],
+    "services": [],
+    "clients-slider": [],
+    "index-info": [],
+    "index-info-card": [],
+    "mobile-menu": [],
+    "lang-switcher": []
+  },
+  "addCssBefore": [
+    "./src/scss/variables.scss",
+    "./src/scss/mixins.scss",
+    "../../node_modules/flickity/dist/flickity.min.css"
+  ],
+  "addCssAfter": [
+    "./src/scss/print.scss"
+  ],
+  "singleCompiled": [],
+  "addJsBefore": [
+    "./node_modules/focus-visible/dist/focus-visible.min.js",
+    "./node_modules/blazy/blazy.min.js",
+    "./node_modules/flickity/dist/flickity.pkgd.min.js",
+    "./node_modules/svg4everybody/dist/svg4everybody.js"
+  ],
+  "addJsAfter": [
+    "./src/js/global-script.js"
+  ],
+  "addImages": [
+    "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
+  ],
+  "copiedCss": [],
+  "copiedJs": [],
+  "dirs": {
+    "srcPath": "./src/",
+    "buildPath": "./build/",
+    "blocksDirName": "blocks"
+  }
+}

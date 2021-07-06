@@ -1,0 +1,15 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html', {
+  "location": "page-header--index"
+})
+
+-->
+
+<header class="page-header @@location">
+  @@include('../../blocks/logo/logo.html', {
+    "location": "logo--header"
+  })
+</header>
