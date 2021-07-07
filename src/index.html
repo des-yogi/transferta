@@ -14,10 +14,13 @@
 
     <div class="page__content">
 
-      <div class="container  page-header__wrapper  page-header__wrapper--index">
-        @@include('blocks/page-header/page-header.html', {
-          "location": "page-header--index"
-        })
+      <div class="page-header__wrapper  page-header__wrapper--index" style="background-image:url(./img/banner-bg.jpg);">
+
+          @@include('blocks/page-header/page-header.html', {
+            "location": "page-header--index"
+          })
+          @@include('blocks/banner-index/banner-index.html')
+
       </div>
 
       <main role="main">

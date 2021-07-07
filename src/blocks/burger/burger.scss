@@ -1,10 +1,3 @@
-// В этом файле должны быть стили для БЭМ-блока burger, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$toggler-part-height:         3px !default;
-$toggler-part-bg-color:       #000 !default;
-
 .burger {
 
   $block-name:                &; // #{$block-name}__element
@@ -13,14 +6,24 @@ $toggler-part-bg-color:       #000 !default;
   z-index: 1;
   display: flex;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
+  padding: 1px;
+  margin-left: 32px;
+  background: $white;
+  border-radius: 8px;
+  border: none;
   user-select: none;
   cursor: pointer;
+  transition: all $transition-time ease;
+
+  @media (min-width: $menu-desktop-width) {
+    display: none;
+  }
 
   > span {
     display: inline-block;
-    width: 100%;
+    width: 22px;
     height: $toggler-part-height;
     background: $toggler-part-bg-color;
     position: relative;
@@ -31,7 +34,7 @@ $toggler-part-bg-color:       #000 !default;
       content: '';
       position: absolute;
       left: 0;
-      width: 100%;
+      width: 22px;
       height: $toggler-part-height;
       background: $toggler-part-bg-color;
       transform-origin: 50% 50%;
@@ -39,32 +42,35 @@ $toggler-part-bg-color:       #000 !default;
     }
 
     &:before {
-      top: -10px;
+      top: -8px;
     }
 
     &:after {
-      top: 10px;
+      top: 8px;
     }
   }
 
   &--close {
+    background-color: $main-color;
+    transition: all $transition-time ease;
 
     > span {
-      transition: background $transition-time 0s;
+      transition: all $transition-time 0s;
       background: transparent;
 
       &:before,
       &:after {
         transition: top $transition-time, transform $transition-time $transition-time;
         top: 0;
+        background: $white;
       }
 
       &:before {
-        transform: rotate3d(0, 0, 1, 45deg);
+        transform: rotate3d(0, 0, 1, 45deg) scale(0.7);
       }
 
       &:after {
-        transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg) scale(0.7);
       }
     }
   }

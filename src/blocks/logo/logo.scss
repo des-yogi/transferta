@@ -2,19 +2,13 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
 
   &:hover,
   &:focus {
 
     svg {
-
-      @media (min-width: $screen-xl) {
-        width: 203px;
-        height: 58px;
-      }
 
       .text {
         fill: $main-color;
@@ -22,18 +16,23 @@
     }
   }
 
-  svg > .text {
-    transition: fill $transition-time ease;
+  svg {
+
+    @media (min-width: $screen-xl) {
+      width: 203px;
+      height: 58px;
+    }
+
+    & > .text {
+      transition: fill $transition-time ease;
+    }
   }
 
   &--header {
 
-
     svg {
       width: 164px;
       height: 48px;
-
-      //.tp {}
 
       .text {
         fill: $text-color;

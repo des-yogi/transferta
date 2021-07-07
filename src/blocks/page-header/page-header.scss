@@ -1,8 +1,121 @@
-// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-header {
+  position: relative;
+  z-index: 1;
+  padding-top: 13px;
+  padding-bottom: 11.5px;
+  background-color: $white;
+
+  @media (min-width: $screen-md) {
+    padding-top: 14.5px;
+    padding-bottom: 14px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 23.5px;
+    padding-bottom: 23px;
+    background-color: transparent;
+  }
 
   $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    background-color: $white;
+
+    &--index {
+      position: relative;
+      background-color: transparent;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba($secondary-color, $opacity);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__logo-col {
+    @include col(xs, 8, $grid-columns, 30px);
+    @include col(md, 4);
+    @include col(xl, 3);
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu-col {
+    @include col(xs, 4, $grid-columns, 30px);
+    @include col(md, 8);
+    @include col(xl, 9);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__service-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 100%;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__tel-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 !important;
+    font-size: $font-size-sm;
+    font-weight: 500;
+
+    @media (max-width: $screen-md - 1) {
+      display: none;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -32px;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px;
+      background-image: svg-load('../blocks/sprite-svg/svg/tel.svg', fill=$main-color);
+    }
+  }
+
+  &__tel-item {
+    color: inherit;
+
+    & + & {
+      margin-left: 24px;
+    }
+  }
+
+  &__tel-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &--index {
+    border-bottom: 1.5px solid red;
+  }
 }
