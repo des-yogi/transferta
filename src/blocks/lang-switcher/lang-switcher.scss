@@ -40,4 +40,12 @@
       display: none;
     }
   }
+
+  &--mob-menu {
+    margin-left: 0 !important;
+
+    @media (min-width: $screen-md) {
+      justify-content: center;
+    }
+  }
 }

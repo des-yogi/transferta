@@ -36,6 +36,10 @@
 
       .text {
         fill: $text-color;
+
+        @media (min-width: $screen-xl) {
+          fill: $white;
+        }
       }
     }
   }

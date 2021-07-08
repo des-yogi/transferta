@@ -1,18 +1,16 @@
 .page-header {
   position: relative;
-  z-index: 1;
-  padding-top: 13px;
-  padding-bottom: 11.5px;
+  z-index: 2;
   background-color: $white;
 
   @media (min-width: $screen-md) {
-    padding-top: 14.5px;
-    padding-bottom: 14px;
+    //padding-top: 14.5px;
+    //padding-bottom: 14px;
   }
 
   @media (min-width: $screen-xl) {
-    padding-top: 23.5px;
-    padding-bottom: 23px;
+    //padding-top: 23.5px;
+    //padding-bottom: 23px;
     background-color: transparent;
   }
 
@@ -39,6 +37,22 @@
         background-color: rgba($secondary-color, $opacity);
         pointer-events: none;
       }
+    }
+  }
+
+  &__inner {
+    padding-top: 13px;
+    padding-bottom: 11px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 23.5px;
+      padding-bottom: 23px;
+      border-bottom: 1.5px solid $white;
     }
   }
 
@@ -116,6 +130,24 @@
   }
 
   &--index {
-    border-bottom: 1.5px solid red;
+
+    #{$block-name}__tel-list {
+
+      @media (min-width: $screen-xl) {
+        color: $white;
+      }
+    }
+
+    .lang-switcher__link {
+
+      @media (min-width: $screen-xl) {
+        color: $white;
+      }
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+    }
   }
 }

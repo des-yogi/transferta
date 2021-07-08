@@ -16,11 +16,30 @@
     min-height: calc(553px - 124px);
   }
 
-  $block-name:                &; // #{$block-name}__element
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-color: $main-color;
+    border-radius: $border-radius-xl;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 8px;
+    background-image: svg-load('../blocks/sprite-svg/svg/down-ctrl.svg', fill=$white);
 
-  &__inner {
-
+    @media (min-width: $screen-md) {
+      bottom: -24px;
+      width: 48px;
+      height: 48px;
+      background-size: 22px 12px;
+    }
   }
+
+  $block-name:                &; // #{$block-name}__element
 
   &__text-col {
     @include col(xs, 12, $grid-columns, 30px);
@@ -45,10 +64,6 @@
   }
 
   &__text {
-
-  }
-
-  &__title {
 
   }
 }

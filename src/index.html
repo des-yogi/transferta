@@ -16,11 +16,14 @@
 
       <div class="page-header__wrapper  page-header__wrapper--index" style="background-image:url(./img/banner-bg.jpg);">
 
-          @@include('blocks/page-header/page-header.html', {
-            "location": "page-header--index"
-          })
-          @@include('blocks/banner-index/banner-index.html')
+        @@include('blocks/page-header/page-header.html', {
+         "location": "page-header--index"
+        })
 
+
+        <div class="container">
+          @@include('blocks/banner-index/banner-index.html')
+        </div>
       </div>
 
       <main role="main">
@@ -39,7 +42,10 @@
       @@include('blocks/page-footer/page-footer.html')
     </div>
 
+    @@include('blocks/mobile-menu/mobile-menu.html')
+
   </div>
+
 
   @@include('_include/page_bottom.html')
 

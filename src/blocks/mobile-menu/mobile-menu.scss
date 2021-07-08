@@ -1,9 +1,63 @@
-// В этом файле должны быть стили для БЭМ-блока mobile-menu, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .mobile-menu {
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+  color: $white;
+  background-color: $secondary-color;
+  transform: translateY(-2000px);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+
+  @media (min-width: $menu-desktop-width) {
+    display: none !important;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__inner {
+
+  }
+
+  &__lang-switcher,
+  &__main-nav-wrapper,
+  &__social {
+    padding: 24px 0;
+  }
+
+  &__lang-switcher {
+    border-bottom: 1.5px solid rgba($text-muted, 0.25);
+  }
+
+  &__main-nav-wrapper {
+    border-bottom: 1.5px solid rgba($text-muted, 0.25);
+  }
+
+  &__social {
+
+  }
+
+  &--open {
+    top: 72px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    //max-height: none;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    overflow-y: hidden;
+    //overflow-y: auto;
+
+    @media (min-width: $screen-md) {
+      top: 74px;
+      bottom: calc(100vh - 74px - 226px);
+      //height: auto;
+      //transform: translateY(74px);
+    }
+
+    #{$block-name}__inner {
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
 }

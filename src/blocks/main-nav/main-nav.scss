@@ -37,7 +37,7 @@
     font-weight: 500;
     text-decoration: none;
     color: $secondary-color;
-    background-color: #fff;
+    background-color: transparent;
 
     &:hover,
     &:focus {
@@ -50,6 +50,48 @@
 
     @media (max-width: $menu-desktop-width - 1) {
       display: none;
+    }
+
+    #{$block-name}__link {
+
+      @media (min-width: $menu-desktop-width) {
+        color: $white;
+
+        &:hover,
+        &:focus {
+          color: $main-color;
+        }
+      }
+    }
+  }
+
+  &--mob-menu {
+
+    #{$block-name}__list {
+
+      @media (min-width: $screen-md) {
+        justify-content: center;
+      }
+    }
+
+    #{$block-name}__item {
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+
+        @media (min-width: $screen-md) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    #{$block-name}__link {
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
     }
   }
 }
