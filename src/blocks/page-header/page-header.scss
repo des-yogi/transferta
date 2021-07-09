@@ -3,14 +3,7 @@
   z-index: 2;
   background-color: $white;
 
-  @media (min-width: $screen-md) {
-    //padding-top: 14.5px;
-    //padding-bottom: 14px;
-  }
-
   @media (min-width: $screen-xl) {
-    //padding-top: 23.5px;
-    //padding-bottom: 23px;
     background-color: transparent;
   }
 

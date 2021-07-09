@@ -1,0 +1,15 @@
+.copyrights {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size-sm;
+
+  $block-name:                &; // #{$block-name}__element
+
+  img {
+    display: block;
+    width: 85px;
+    height: 32px;
+  }
+}

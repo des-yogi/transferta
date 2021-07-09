@@ -1,9 +1,51 @@
-// В этом файле должны быть стили для БЭМ-блока index-info, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .index-info {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: $bg-light;
+
+  @media (min-width: $screen-md) {
+    padding-top: 92px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  & + & {
+    @media (min-width: $screen-md) {
+      padding-top: 64px;
+      margin-top: 2px;
+    }
+  }
+
+  &__header-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    margin-bottom: 32px;
+  }
+
+  &__card-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 32px;
+
+    &:nth-child(4) {
+      @media (max-width: $screen-xl - 1) {
+        display: none;
+      }
+    }
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__descr {
+    font-weight: 500;
+  }
 }

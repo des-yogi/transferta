@@ -14,15 +14,11 @@
       body.classList.toggle('noscroll');
       mobMenu.classList.toggle('mobile-menu--open');
       if (mobMenu.classList.contains('mobile-menu--open')) {
-        console.log('1');
-        mobMenu.removeAttribute('aria-hidden');
+        mobMenu.setAttribute('tabindex', '1');
         mobMenu.focus();
-        mobMenu.removeAttribute('tabindex');
       } else {
-        mobMenu.setAttribute('aria-hidden', true);
         mobMenu.setAttribute('tabindex', '-1');
-        mobMenu.blur();
-        console.log('2');
+        toggler.focus();
         return;
       }
     }

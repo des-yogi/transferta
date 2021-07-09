@@ -1,0 +1,35 @@
+.see-more-link {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  color: inherit;
+  background: none;
+  user-select: none;
+
+  &::after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 24px;
+    width: 12px;
+    height: 22px;
+    transform: translateY(-1px);
+    background-size: 12px 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: svg-load('../blocks/sprite-svg/svg/right-ctrl.svg', fill=$main-color);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    margin-top: 32px;
+
+    &--center {
+      margin-top: 24px;
+      text-align: center;
+    }
+  }
+}

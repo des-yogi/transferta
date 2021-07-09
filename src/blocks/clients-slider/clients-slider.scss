@@ -1,9 +1,46 @@
-// В этом файле должны быть стили для БЭМ-блока clients-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .clients-slider {
+  padding-top: 92px;
+  padding-bottom: 92px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 11);
+    @include col(xl, 8);
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__intro {
+    font-weight: 500;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 65px;
+    margin-right: 64px;
+    overflow: hidden;
+  }
+
+  &__img {
+    flex: 0 0;
+    width: auto;
+    height: auto;
+    max-width: 175px;
+    max-height: 65px;
+    object-fit: contain;
+    object-position: center;
+  }
 }

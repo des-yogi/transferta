@@ -28,11 +28,276 @@
 
       <main role="main">
 
-        <div class="container">
+        <section class="container  services">
 
+          <div class="row">
+            <div class="services__title-col">
+              <h2 class="services__title">
+                Услуги
+              </h2>
+              <p class="services__intro">Наша компания специализируется на предоставлении услуг, связанных с трансфертным ценообразованием. Мы готовим как полный комплект документации по трансфертному ценообразованию, так и отдельные ее разделы, а также предоставляем услуги по поиску всей необходимой информации для ее качественного составления.</p>
+            </div>
+          </div>
 
+          <div class="services__row">
 
-        </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "transfer-doc",
+                "iconWidth": "22",
+                "iconHeight": "26",
+                "title": "Трансфертная документация",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "Новое",
+                "icon": "quoted-prices",
+                "iconWidth": "22",
+                "iconHeight": "28",
+                "title": "Котировальные цены",
+                "descr": "Складання документації з трансфертного ціноутворення"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "interest-rates",
+                "iconWidth": "26",
+                "iconHeight": "26",
+                "title": "Процентные ставки",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "royalty-rates",
+                "iconWidth": "26",
+                "iconHeight": "26",
+                "title": "Ставки роялти",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "comparable-companies",
+                "iconWidth": "26",
+                "iconHeight": "22",
+                "title": "Сопоставимые компании",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "financial-statements",
+                "iconWidth": "22",
+                "iconHeight": "26",
+                "title": "Финансовая отчетность",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "consulting",
+                "iconWidth": "26",
+                "iconHeight": "26",
+                "title": "Консалтинг",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "Акция",
+                "icon": "other-services",
+                "iconWidth": "26",
+                "iconHeight": "24",
+                "title": "Другие услуги",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="container  clients-slider">
+
+          <div class="row">
+            <div class="clients-slider__title-col">
+              <h2 class="clients-slider__title">
+                Наши клиенты
+              </h2>
+              <p class="clients-slider__intro">Нашими клиентами являются компании, которые осуществляют хозяйственную деятельность в различных отраслях экономики, а также аудиторские и консалтинговые фирмы.</p>
+            </div>
+          </div>
+
+          <div class="carousel clients-slider__container">
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "agrinol"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "alebor-group"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "asbud"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "bakertilly"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "bako-tech"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "biochem"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "biznes-partnery"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "biznes-rishenia"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "chp-partners"
+              })
+            </div>
+            <div class="carousel-cell clients-slider__item">
+              @@include('blocks/clients-slider/clients-slider.html', {
+                "image": "ep"
+              })
+            </div>
+          </div>
+
+          <div class="see-more-link__wrapper">
+            @@include('blocks/see-more-link/see-more-link.html', {
+              "url": "#",
+              "text": "Посмотреть всех"
+            })
+          </div>
+
+        </section>
+
+        <section class="index-info">
+          <div class="container">
+
+            <div class="row">
+
+              <div class="index-info__header-col">
+                <div class="index-info__header">
+                  <h2 class="index-info__title">Трансфертное ценообразование в 2020 году</h2>
+                  <p class="index-info__descr">Товарищи! Постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании соответствующий условий активизации.</p>
+                </div>
+                <div class="see-more-link__wrapper  see-more-link__wrapper--center">
+                  @@include('blocks/see-more-link/see-more-link.html', {
+                    "url": "#",
+                    "text": "Все новости"
+                  })
+                </div>
+              </div>
+
+              <div class="index-info__card-col">
+                @@include('blocks/index-info-card/index-info-card.html', {
+                  "url": "#",
+                  "img": "news-01",
+                  "title": "Дашборд «Экспорт-импорт товаров в 2021 году»",
+                  "descr": ""
+                })
+              </div>
+
+              <div class="index-info__card-col">
+                @@include('blocks/index-info-card/index-info-card.html', {
+                  "url": "#",
+                  "img": "news-02",
+                  "title": "Инструменты конкурентной разведки и трансфертного ценообразования",
+                  "descr": ""
+                })
+              </div>
+
+              <div class="index-info__card-col">
+                @@include('blocks/index-info-card/index-info-card.html', {
+                  "url": "#",
+                  "img": "news-03",
+                  "title": "Судебная практика по вопросам трансфертного ценообразования",
+                  "descr": ""
+                })
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <section class="index-info">
+          <div class="container">
+
+            <div class="row">
+
+              <div class="index-info__header-col">
+                <div class="index-info__header">
+                  <h2 class="index-info__title">Публикации</h2>
+                  <p class="index-info__descr">Товарищи! Постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании соответствующий условий активизации.</p>
+                </div>
+                <div class="see-more-link__wrapper  see-more-link__wrapper--center">
+                  @@include('blocks/see-more-link/see-more-link.html', {
+                    "url": "#",
+                    "text": "Все публикации"
+                  })
+                </div>
+              </div>
+
+              <div class="index-info__card-col">
+                @@include('blocks/index-info-card/index-info-card.html', {
+                  "url": "#",
+                  "img": "news-02",
+                  "title": "Вступили в силу изменения в Порядок составления Отчета о контролируемых операции",
+                  "descr": "16.06.2017 вступили в силу изменения в Порядок составления Отчета о контролируемых операции приказ..."
+                })
+              </div>
+
+              <div class="index-info__card-col">
+                @@include('blocks/index-info-card/index-info-card.html', {
+                  "url": "#",
+                  "img": "news-02",
+                  "title": "Утвержден порядок расчета средневзвешенного показателя рентабельности",
+                  "descr": "Кабинет Министров на выполнение пп.39.3.2.8 пп.39.3.2 п.39.3 ст.39 "
+                })
+              </div>
+
+              <div class="index-info__card-col">
+                @@include('blocks/index-info-card/index-info-card.html', {
+                  "url": "#",
+                  "img": "news-03",
+                  "title": "В базе данных «Трансферт» реализовано поиск информации о ставках роялти",
+                  "descr": "Уважаемые коллеги, рады сообщить, что в базе данных «Трансферт» реализовано поиск информации о ставках роялти..."
+                })
+              </div>
+
+            </div>
+
+          </div>
+        </section>
 
       </main>
 

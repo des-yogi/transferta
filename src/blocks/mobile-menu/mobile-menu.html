@@ -1,9 +1,9 @@
 <!--DEV
 @ @include('blocks/mobile-menu/mobile-menu.html')
 -->
-<section id="mobile-menu" class="container mobile-menu" aria-hidden="true" tabindex="-1">
+<section id="mobile-menu" class="container mobile-menu" tabindex="-1" aria-labelledby="mobile-menu-title">
   <div class="mobile-menu__inner">
-    <h2 class="visually-hidden">Мобильное меню</h2>
+    <h2 id="mobile-menu-title" class="visually-hidden">Мобильное меню</h2>
     <div class="mobile-menu__lang-switcher">
       @@include('../../blocks/lang-switcher/lang-switcher.html', {
         "location": "lang-switcher--mob-menu"

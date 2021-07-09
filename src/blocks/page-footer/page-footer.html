@@ -1,11 +1,73 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
-<footer class="page-footer">
-  page-footer
+<footer class="container page-footer">
+  <div class="page-footer__main">
+
+    <div class="page-footer__logo-col">
+      @@include('../../blocks/logo/logo.html', {
+        "location": "logo--footer"
+      })
+    </div>
+
+    <div class="page-footer__social-col">
+      @@include('../../blocks/social/social.html', {
+        "background": "social--ondark",
+        "location": "social--footer"
+      })
+    </div>
+
+    <div class="page-footer__slogan-col">
+      <span class="page-footer__slogan"><span>Ми не говоримо, що ми найкращі.</span> <span>Тому що ми єдині, хто надає такі послуги.</span></span>
+    </div>
+
+    <div class="page-footer__address-col">
+      <div class="page-footer__address">
+        <span>БЦ "Очаківський", оф.100.1</span><br>
+        <span>вул. Очаківська, 5/6<span class="visually-hidden">, оф.100.1</span></span><br>
+        <span>м. Київ, </span>
+        <span>03151</span>
+      </div>
+      <div class="page-footer__tels">
+        <p class="page-footer__tel"><a href="tel:+380443624757"><span>+38 (044) 362-47-57</span></a></p>
+        <p class="page-footer__tel"><a href="tel:+380688529566">+<span>38 (068) 852-95-66</span></a></p>
+      </div>
+      <div class="page-footer__email">
+        <a href="mailto:i@transferta.com.ua"><span>i@transferta.com.ua</span></a>
+      </div>
+    </div>
+
+    <div class="page-footer__nav-col">
+      <nav class="page-footer__nav">
+        <ul class="list-nostyled page-footer__nav-list">
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Услуги</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Клиенты</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Новости</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Публикации</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">О компании</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a href="#" class="page-footer__nav-link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+  <div class="page-footer__copyrights copyrights">
+    <span>©&thinsp;2015-2021 «Трансферта»</span>
+    <a href="#" target="_blank" rel="nofollow">
+      <img src="img/it-doors-logo.svg" alt="IT Doors logo" width="85" height="32">
+    </a>
+  </div>
 </footer>

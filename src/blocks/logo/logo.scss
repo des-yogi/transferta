@@ -2,7 +2,7 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   &:hover,
