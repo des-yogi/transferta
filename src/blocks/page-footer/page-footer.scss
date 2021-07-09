@@ -1,8 +1,160 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  color: $white;
 
   $block-name:                &; // #{$block-name}__element
+
+  a:not(.logo) {
+    text-decoration: none;
+    color: currentColor;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(24px, auto);
+    grid-template-areas:
+        "logo"
+        "social"
+        "slogan"
+        "address"
+        "nav";
+    row-gap: 32px;
+    padding: 42px 0;
+    font-weight: 500;
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "logo     social"
+        "address  slogan"
+        "address  nav";
+      column-gap: 64px;
+      //row-gap: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "logo    address  nav"
+        "social  address  nav"
+        "slogan  address  nav";
+      padding-top: 64px;
+    }
+  }
+
+  &__logo-col {
+
+    @media (min-width: $screen-md) {
+      grid-area: logo;
+    }
+  }
+
+  &__social-col {
+
+    @media (min-width: $screen-md) {
+      grid-area: social;
+    }
+  }
+
+  &__slogan-col {
+
+    @media (min-width: $screen-md) {
+      grid-area: slogan;
+    }
+  }
+
+  &__address-col {
+
+    @media (min-width: $screen-md) {
+      grid-area: address;
+    }
+  }
+
+  &__slogan {
+
+    span {
+      display: block;
+    }
+  }
+
+  &__address,
+  &__tels,
+  &__email {
+    position: relative;
+    padding-left: 36px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__address,
+  &__tels {
+    margin-bottom: 32px;
+  }
+
+  &__address {
+
+    &::before {
+      background-size: 16.5px 21px;
+      background-image: svg-load('../blocks/sprite-svg/svg/pin.svg', fill=$main-color);
+    }
+  }
+
+  &__tels {
+
+    &::before {
+      background-size: 19px;
+      background-image: svg-load('../blocks/sprite-svg/svg/tel.svg', fill=$main-color);
+    }
+  }
+
+  &__email {
+
+    &::before {
+      background-size: 20px 15px;
+      background-image: svg-load('../blocks/sprite-svg/svg/envelope.svg', fill=$main-color);
+    }
+  }
+
+  &__tel {
+    margin-top: 0 !important;
+
+    &:first-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__nav-col {
+
+    @media (min-width: $screen-md) {
+      grid-area: nav;
+    }
+  }
+
+  &__nav-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);;
+    grid-auto-rows: auto;
+    column-gap: 24px;
+    row-gap: 16px;
+  }
+
+  &__copyrights {
+    padding: 24px 0;
+    border-top: 1.5px solid $white;
+  }
 }

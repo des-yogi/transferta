@@ -1,14 +1,22 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/banner-index/banner-index.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="banner-index">content</div>
-
 -->
+<div class="banner-index">
+  <div class="row banner-index__inner">
+
+    <div class="banner-index__text-col">
+      <div class="banner-index__text">
+        <h1 class="banner-index__title">Трансфертне ціноутворення</h1>
+        <p>ООО "Трансферт" (ЕГРПОУ 40183456) является консалтинговой компанией, которая специализируется на предоставлении информационно-консультационных услуг по вопросам трансфертного ценообразования. ООО «Трансферт» обладает собственной частной базой данных "Трансферт", в которой накапливается информация о мировых, внутренние, экспортные, импортные, биржевые и др. цены на товары (работы, услуги), а также информация о результатах деятельности украинских компаний.</p>
+      </div>
+    </div>
+
+    <div class="banner-index__social-col">
+      @@include('../../blocks/social/social.html', {
+        "background": "social--ondark",
+        "location": "social--banner"
+      })
+    </div>
+
+  </div>
+</div>

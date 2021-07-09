@@ -1,14 +1,13 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/service-card/service-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="service-card">content</div>
-
 -->
+
+<a href="#" class="service-card" data-tag="@@tag">
+  <span class="service-card__icon">
+    <svg width="@@iconWidth" height="@@iconHeight"
+    aria-hidden="true" focusable="false" fill="currentColor"
+ role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#@@icon"></use></svg>
+  </span>
+  <h4 class="service-card__title">@@title</h4>
+  <p class="service-card__descr">@@descr</p>
+</a>

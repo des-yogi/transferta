@@ -28,7 +28,9 @@
     "index-info": [],
     "index-info-card": [],
     "mobile-menu": [],
-    "lang-switcher": []
+    "lang-switcher": [],
+    "see-more-link": [],
+    "copyrights": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

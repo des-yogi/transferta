@@ -1,14 +1,27 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
-@ @include('blocks/index-info-card/index-info-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="index-info-card">content</div>
-
+@ @include('blocks/index-info-card/index-info-card.html', {
+  "url": "#",
+  "img": "",
+  "title": "",
+  "descr": "",
+})
 -->
+<article class="index-info-card">
+  <a href="@@url" class="embed-responsive embed-responsive--1-1 index-info-card__img" title="@@title" aria-hidden="true" tabindex="-1">
+    <picture>
+      <source data-srcset="img/@@img.webp" media="(min-width: 1200px)" type="image/webp">
+      <source data-srcset="img/@@img.jpg" media="(min-width: 1200px)">
+      <!-- 300x300px -->
+      <source data-srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source data-srcset="img/@@img.jpg" media="(min-width: 480px)">
+      <!-- 640x640px -->
+      <source data-srcset="img/@@img.webp" type="image/webp">
+      <img class="b-lazy-img" data-src="img/@@img.jpg" alt="@@title" width="480" height="480" loading="lazy" decoding=”async”>
+    </picture>
+  </a>
+  <div class="index-info-card__text">
+    <a href="@@url" class="h4 index-info-card__title">@@title</a>
+    <p class="index-info-card__descr">@@descr</p>
+    <p class="publishedon">Апрель 28, 2021</p>
+  </div>
+</article>

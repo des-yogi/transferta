@@ -1,9 +1,27 @@
-// В этом файле должны быть стили для БЭМ-блока index-info-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .index-info-card {
+  height: 100%;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__img {
+    margin-bottom: 24px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__descr {
+    margin: 12px 0 !important;
+
+    &:empty {
+      display: none;
+    }
+  }
 }

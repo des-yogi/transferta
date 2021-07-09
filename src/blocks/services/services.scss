@@ -1,9 +1,48 @@
-// В этом файле должны быть стили для БЭМ-блока services, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .services {
+  padding-top: 64px;
+  padding-bottom: calc(64px - 8px);
+  background-color: $bg-light;
+
+  @media (min-width: $screen-md) {
+    padding-top: 92px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 128px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__row {
+    @include row(
+      $xs-grid-gutter:  8px,
+      $sm-grid-gutter:  8px,
+      $md-grid-gutter:  8px,
+      $lg-grid-gutter:  8px,
+      $xl-grid-gutter:  8px,
+      $xxl-grid-gutter: 8px
+    );
+  }
+
+  &__title-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 11);
+    @include col(xl, 8);
+    margin-bottom: 64px;
+  }
+
+  &__card-col {
+    @include col(xs, 12, $grid-columns, 8px);
+    @include col(md, 6, $grid-columns, 8px);
+    @include col(xl, 4, $grid-columns, 8px);
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__intro {
+    font-weight: 500;
+  }
 }

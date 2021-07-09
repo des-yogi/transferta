@@ -1,14 +1,23 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/mobile-menu/mobile-menu.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="mobile-menu">content</div>
-
 -->
+<section id="mobile-menu" class="container mobile-menu" tabindex="-1" aria-labelledby="mobile-menu-title">
+  <div class="mobile-menu__inner">
+    <h2 id="mobile-menu-title" class="visually-hidden">Мобильное меню</h2>
+    <div class="mobile-menu__lang-switcher">
+      @@include('../../blocks/lang-switcher/lang-switcher.html', {
+        "location": "lang-switcher--mob-menu"
+      })
+    </div>
+    <div class="mobile-menu__main-nav-wrapper">
+      @@include('../../blocks/main-nav/main-nav.html', {
+        "location": "main-nav--mob-menu"
+      })
+    </div>
+    <div class="mobile-menu__social">
+      @@include('../../blocks/social/social.html', {
+        "background": "social--ondark"
+      })
+    </div>
+  </div>
+</section>
