@@ -45,4 +45,17 @@
   &__intro {
     font-weight: 500;
   }
+
+  &--noindex {
+    padding-top: 32px;
+    border-top: 4px solid $white;
+
+    @media (min-width: $screen-md) {
+      padding-top: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 32px;
+    }
+  }
 }

@@ -19,6 +19,7 @@
 
   &__descr {
     margin: 12px 0 !important;
+    font-size: $font-size-sm;
 
     &:empty {
       display: none;

@@ -1,0 +1,21 @@
+.news {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 64px;
+  background-color: $bg-light;
+  border-top: 4px solid $white;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 92px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    margin-top: 0 !important;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+  }
+}

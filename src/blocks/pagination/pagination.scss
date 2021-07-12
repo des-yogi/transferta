@@ -5,13 +5,13 @@ $border-color:                hsl(0, 0%, 60%) !default;
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 18px;
+  justify-content: flex-end;
+  margin-top: 42px;
   //margin-bottom: 60px;
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-xl) {
     //justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 64px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -25,7 +25,12 @@ $border-color:                hsl(0, 0%, 60%) !default;
   }
 
   &__item {
-    margin-right: 0.5em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -34,7 +39,8 @@ $border-color:                hsl(0, 0%, 60%) !default;
     &.active {
 
       a {
-        color: $main-color;
+        color: $white;
+        background-color: $secondary-color;
         pointer-events: none;
       }
     }
@@ -58,7 +64,7 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$main-color);
         }
 
         &--disabled {
@@ -75,7 +81,7 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$main-color);
         }
 
         &--disabled {
@@ -89,24 +95,24 @@ $border-color:                hsl(0, 0%, 60%) !default;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-    font-weight: 500;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    font-weight: 600;
     line-height: 1;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    color: $text-muted;
-    background-color: $white;
-    border-radius: 0;
+    color: $secondary-color;
+    background-color: transparent;
+    border-radius: $border-radius;
     transition: all 0.2s ease-out;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $white;
-      background-color: $main-color;
+      color: $main-color;
+      background-color: rgba($main-color, 0.1);
     }
 
     &--disabled,

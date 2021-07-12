@@ -1,0 +1,42 @@
+.page-caption {
+  padding-top: 24px;
+  padding-bottom: 16px;
+  background-color: $bg-light;
+
+  @media (min-width: $screen-md) {
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 32px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(xl, 6);
+  }
+
+  &__breadcrumbs-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(xl, 6);
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__title {
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
+  }
+}

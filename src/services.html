@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Услуги</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+
+        <header class="container page-header">
+          <div class="page-header__inner">
+            <div class="row">
+              <div class="page-header__logo-col">
+                @@include('blocks/logo/logo.html', {
+                  "location": "logo--header logo--noindex"
+                })
+              </div>
+              <div class="page-header__menu-col">
+                <div class="page-header__service-menu">
+                  <ul class="list-nostyled  page-header__tel-list">
+                    <li class="page-header__tel-item">
+                      <a href="tel:+380443624757" class="page-header__tel-link">+38 (044) 362-47-57</a>
+                    </li>
+                    <li class="page-header__tel-item">
+                      <a href="tel:+380688529566" class="page-header__tel-link">+38 (068) 852-95-66</a>
+                    </li>
+                  </ul>
+                  @@include('blocks/lang-switcher/lang-switcher.html', {
+                    "location": "lang-switcher--header"
+                  })
+                  <button id="main-nav-toggler" class="burger" aria-label="Переключатель мобильного меню" aria-controls="mobile-menu"><span></span></button>
+                </div>
+                @@include('blocks/main-nav/main-nav.html', {
+                  "location": "main-nav--header main-nav--noindex"
+                })
+              </div>
+            </div>
+          </div>
+        </header>
+
+      </div>
+
+      <main>
+
+        <div class="container  page-caption">
+          <div class="row">
+
+            <div class="page-caption__title-col">
+              <h1 class="page-caption__title">Услуги</h1>
+            </div>
+
+            <div class="page-caption__breadcrumbs-col">
+              @@include('blocks/breadcrumbs/breadcrumbs.html')
+            </div>
+
+          </div>
+        </div>
+
+        <section class="container  services  services--noindex">
+
+          <div class="services__row">
+
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "transfer-doc",
+                "iconWidth": "22",
+                "iconHeight": "26",
+                "title": "Трансфертная документация",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "Новое",
+                "icon": "quoted-prices",
+                "iconWidth": "22",
+                "iconHeight": "28",
+                "title": "Котировальные цены",
+                "descr": "Складання документації з трансфертного ціноутворення"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "interest-rates",
+                "iconWidth": "26",
+                "iconHeight": "26",
+                "title": "Процентные ставки",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "royalty-rates",
+                "iconWidth": "26",
+                "iconHeight": "26",
+                "title": "Ставки роялти",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "comparable-companies",
+                "iconWidth": "26",
+                "iconHeight": "22",
+                "title": "Сопоставимые компании",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "financial-statements",
+                "iconWidth": "22",
+                "iconHeight": "26",
+                "title": "Финансовая отчетность",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "",
+                "icon": "consulting",
+                "iconWidth": "26",
+                "iconHeight": "26",
+                "title": "Консалтинг",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+            <div class="services__card-col">
+              @@include('blocks/service-card/service-card.html', {
+                "tag": "Акция",
+                "icon": "other-services",
+                "iconWidth": "26",
+                "iconHeight": "24",
+                "title": "Другие услуги",
+                "descr": "Складання документації з трансфертного ціноутворення та звіту про контрольовані операції"
+              })
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mobile-menu/mobile-menu.html')
+
+  </div>
+
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

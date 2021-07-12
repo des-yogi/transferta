@@ -1,0 +1,26 @@
+<!--DEV
+@ @include('blocks/news-card/news-card.html')
+-->
+
+<article class="news-card">
+  <a href="#" class="embed-responsive embed-responsive--1-1  news-card__img" tabindex="-1" aria-hidden="true">
+    <picture>
+      <source src="img/@@img.webp" type="image/webp">
+      <img src="img/@@img.jpg" alt="@@title" width="410" height="410" loading="lazy" decoding="async">
+    </picture>
+  </a>
+  <div class="news-card__text">
+    <p class="publishedon">Апрель 28, 2021</p>
+    <h3 class="news-card__title">
+      <a href="#" class="news-card__title-link" tabindex="-1" aria-hidden="true">@@title</a>
+    </h3>
+    <p class="news-card__descr">@@descr</p>
+
+    <div class="see-more-link__wrapper">
+      @@include('../../blocks/see-more-link/see-more-link.html', {
+        "url": "#",
+        "text": "Читать далее"
+      })
+    </div>
+  </div>
+</article>

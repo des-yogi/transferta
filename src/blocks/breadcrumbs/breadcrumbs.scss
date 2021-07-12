@@ -2,16 +2,20 @@ $line-height:                 1.375em !default;
 $text-color:                  hsl(0, 0%, 10%) !default;
 
 .breadcrumbs {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  //margin-top: 25px;
+  //margin-bottom: 25px;
 
   $block-name:                &;
   // #{$block-name}__element
 
   &__list {
     padding: 0;
-    list-style: none;
     margin: 0;
+    list-style: none;
+
+    @media (min-width: $screen-xl) {
+      text-align: right;
+    }
   }
 
 
@@ -19,7 +23,7 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     display: inline-block;
     vertical-align: baseline;
     max-width: 100%;
-    margin-right: 0.6em;
+    margin-right: 4px;
     margin-bottom: 0.5em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -29,25 +33,28 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     }
 
     &:not(:last-child)::after {
-      content: '|';
+      content: '›';
       display: inline-block;
-      margin-left: 0.8em;
+      vertical-align: baseline;
+      margin-left: 6px;
+      font-size: 16px;
       font-weight: 700;
-      color: $text-muted;
+      transform: translateY(1px);
+      color: $black;
     }
 
     &:last-child {
 
       #{$block-name}__link {
         text-decoration: none;
-        color: $main-color;
+        color: $text-muted;
       }
     }
   }
 
   &__link {
     max-width: 100%;
-    font-size: 14px;
+    font-size: $font-size-sm;
     font-weight: 500;
     color: $text-muted;
     text-decoration: none;
