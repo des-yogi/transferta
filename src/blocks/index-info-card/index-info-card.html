@@ -7,6 +7,7 @@
 })
 -->
 <article class="index-info-card">
+  <h3 class="visually-hidden">@@title</h3>
   <a href="@@url" class="embed-responsive embed-responsive--1-1 index-info-card__img" title="@@title" aria-hidden="true" tabindex="-1">
     <picture>
       <source data-srcset="img/@@img.webp" media="(min-width: 1200px)" type="image/webp">
@@ -16,7 +17,7 @@
       <source data-srcset="img/@@img.jpg" media="(min-width: 480px)">
       <!-- 640x640px -->
       <source data-srcset="img/@@img.webp" type="image/webp">
-      <img class="b-lazy-img" data-src="img/@@img.jpg" alt="@@title" width="480" height="480" loading="lazy" decoding=”async”>
+      <img class="b-lazy-img" data-src="img/@@img.jpg" alt="@@title" width="480" height="480" loading="lazy" decoding="async">
     </picture>
   </a>
   <div class="index-info-card__text">

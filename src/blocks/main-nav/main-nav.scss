@@ -65,6 +65,16 @@
     }
   }
 
+  &--noindex {
+
+    #{$block-name}__link {
+
+      @media (min-width: $menu-desktop-width) {
+        color: $text-color;
+      }
+    }
+  }
+
   &--mob-menu {
 
     #{$block-name}__list {

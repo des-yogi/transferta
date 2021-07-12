@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  var clientSlider = new Flickity( '.clients-slider__container', {
+  var elem = document.querySelector('.clients-slider__container');
+  if (!elem) { return; }
+
+  var clientSlider = new Flickity( elem, {
     lazyLoad: 5,
     cellAlign: 'left',
     contain: true,

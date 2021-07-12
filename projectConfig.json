@@ -30,7 +30,11 @@
     "mobile-menu": [],
     "lang-switcher": [],
     "see-more-link": [],
-    "copyrights": []
+    "copyrights": [],
+    "page-caption": [],
+    "clients-block": [],
+    "news": [],
+    "news-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
