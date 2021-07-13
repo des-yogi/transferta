@@ -1,12 +1,8 @@
-// В этом файле должны быть стили для БЭМ-блока table, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 $gray-lightest:               hsl(0, 0%, 90%) !default;
 
 $text-color--muted:           hsl(0, 0%, 50%) !default;
 
-$border-color:                hsl(0, 0%, 60%) !default;
+$border-color:                $bg-light;
 
 $font-size--small:            0.75em !default;
 
@@ -21,21 +17,20 @@ $field-padding-horizontal:    0.7em !default;
 
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid $border-color;
+  border: 1px solid $bg-light;
   margin: $line-height 0;
 
   caption {
     padding-top: 0.4em;
     text-align: right;
-    caption-side: bottom;
-    font-size: $font-size--small;
+    caption-side: top;
+    font-size: $font-size-sm;
     line-height: 1em;
-    color: $text-color--muted;
+    color: $text-muted;
   }
 
   td,
   th {
-    padding: $field-padding-vertical $field-padding-horizontal;
     vertical-align: top;
     border-bottom: 1px solid $border-color;
 
@@ -45,7 +40,15 @@ $field-padding-horizontal:    0.7em !default;
   }
 
   th {
+    padding: 24px 12px;
+    font-size: 14px;
+    font-weight: 500;
     text-align: left;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 12px;
   }
 
   &__header {}

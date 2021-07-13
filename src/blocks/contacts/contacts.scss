@@ -1,0 +1,91 @@
+.contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .social {
+    margin-top: 16px;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+  }
+
+  &__address-wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+
+  &__address-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  .page-footer__address,
+  .page-footer__tels {
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__form-wrapper {
+    padding-top: 32px;
+    padding-bottom: 64px;
+    color: $white;
+    background-color: $secondary-color;
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
+      padding-bottom: 92px;
+    }
+  }
+
+  &__form-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 8);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 4px;
+
+    @media (min-width: $screen-xl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__img-wide {
+
+    @media (min-width: $screen-xl) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+}

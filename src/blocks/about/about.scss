@@ -1,0 +1,54 @@
+.about {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__content {
+    padding-top: 24px;
+    padding-bottom: 64px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
+      padding-bottom: 92px;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(lg, 10);
+    @include col(xl, 9);
+  }
+
+  &__text {
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__persons-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(sm, 6, $grid-columns, 30px);
+    @include col(md, 6);
+
+    &:first-child {
+
+      @media (max-width: $screen-sm - 1) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__person-img {
+    margin-bottom: 32px;
+
+    img {
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
+}

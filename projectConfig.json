@@ -34,7 +34,14 @@
     "page-caption": [],
     "clients-block": [],
     "news": [],
-    "news-card": []
+    "news-card": [],
+    "article": [],
+    "about": [],
+    "contacts": [],
+    "field-text": [],
+    "field-checkbox": [],
+    "field-actions": [],
+    "field-select": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
