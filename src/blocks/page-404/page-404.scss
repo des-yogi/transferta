@@ -1,9 +1,64 @@
-// В этом файле должны быть стили для БЭМ-блока page-404, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-404 {
+
+  @media (min-width: $screen-xl) {
+    background: linear-gradient(to right, $white, $white 50%, $main-color 50%);
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__row {
+    @include row(
+      $xs-grid-gutter:  30px,
+      $sm-grid-gutter:  30px,
+      $md-grid-gutter:  100px,
+      $lg-grid-gutter:  100px,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
+  }
+
+  &__text {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12, $grid-columns, 100px);
+    @include col(xl, 6);
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 92px;
+      padding-bottom: 92px;
+    }
+  }
+
+  &__img {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12, $grid-columns, 100px);
+    @include col(xl, 6);
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      padding-top: 42px;
+      padding-bottom: 42px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 92px;
+      padding-bottom: 92px;
+    }
+
+    img {
+      margin: auto;
+      max-width: 380px;
+    }
+  }
+
+  &__text-inner {
+
+    @media (min-width: $screen-md) {
+      max-width: 335px;
+    }
+  }
 }

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакты</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+
+        <header class="container page-header">
+          <div class="page-header__inner">
+            <div class="row">
+              <div class="page-header__logo-col">
+                @@include('blocks/logo/logo.html', {
+                  "location": "logo--header logo--noindex"
+                })
+              </div>
+              <div class="page-header__menu-col">
+                <div class="page-header__service-menu">
+                  <ul class="list-nostyled  page-header__tel-list">
+                    <li class="page-header__tel-item">
+                      <a href="tel:+380443624757" class="page-header__tel-link">+38 (044) 362-47-57</a>
+                    </li>
+                    <li class="page-header__tel-item">
+                      <a href="tel:+380688529566" class="page-header__tel-link">+38 (068) 852-95-66</a>
+                    </li>
+                  </ul>
+                  @@include('blocks/lang-switcher/lang-switcher.html', {
+                    "location": "lang-switcher--header"
+                  })
+                  <button id="main-nav-toggler" class="burger" aria-label="Переключатель мобильного меню" aria-controls="mobile-menu"><span></span></button>
+                </div>
+                @@include('blocks/main-nav/main-nav.html', {
+                  "location": "main-nav--header main-nav--noindex"
+                })
+              </div>
+            </div>
+          </div>
+        </header>
+
+      </div>
+
+      <main>
+
+        <div class="container  page-caption">
+          <div class="row">
+
+            <div class="page-caption__title-col">
+              <h1 class="page-caption__title">Контакты</h1>
+            </div>
+
+            <div class="page-caption__breadcrumbs-col">
+              @@include('blocks/breadcrumbs/breadcrumbs.html')
+            </div>
+
+          </div>
+        </div>
+
+        <div class="contacts">
+
+          <section class="container  contacts__address-wrapper">
+            <h2 class="visually-hidden">Адрес и варианты для связи</h2>
+            <div class="row">
+
+              <div class="contacts__address-col">
+                <div class="page-footer__address">
+                  <span>БЦ "Очаківський", оф.100.1</span><br>
+                  <span>вул. Очаківська, 5/6<span class="visually-hidden">, оф.100.1</span></span><br>
+                  <span>м. Київ, </span>
+                  <span>03151</span>
+                </div>
+              </div>
+
+              <div class="contacts__address-col">
+                <div class="page-footer__tels">
+                  <p class="page-footer__tel"><a href="tel:+380443624757"><span>+38 (044) 362-47-57</span></a></p>
+                  <p class="page-footer__tel"><a href="tel:+380688529566">+<span>38 (068) 852-95-66</span></a></p>
+                </div>
+              </div>
+
+              <div class="contacts__address-col">
+                <div class="page-footer__email">
+                  <a href="mailto:i@transferta.com.ua"><span>i@transferta.com.ua</span></a>
+                </div>
+                @@include('blocks/social/social.html', {
+                  "background": "",
+                  "location": "social--footer"
+                })
+              </div>
+
+            </div>
+          </section>
+
+          <section class="contacts__map-wrapper">
+            <h2 class="visually-hidden">Мы на карте</h2>
+            <iframe title="Мы на карте" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1426.4774528390908!2d30.452088223653405!3d50.42817672920504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cea55799a03b%3A0xc0546258cdd2d6f9!2z0JHQpiDQntGH0LDQutGW0LLRgdGM0LrQuNC5!5e0!3m2!1sru!2sua!4v1626181128149!5m2!1sru!2sua" style="display:block;width:100%;height:200px;border:0;" allowfullscreen loading="lazy"></iframe>
+          </section>
+
+          <section class="container  contacts__form-wrapper">
+            <h2 class="visually-hidden">Контактная форма</h2>
+
+            <div class="row">
+              <div class="contacts__form-col">
+                <form class="contacts__form" action="" method="post">
+                  @@include('blocks/field-text/field-text.html', {
+                    "label": "Имя",
+                    "required": "field-text__name--required",
+                    "type": "text",
+                    "error": ""
+                  })
+                  @@include('blocks/field-text/field-text.html', {
+                    "label": "Телефон",
+                    "required": "field-text__name--required",
+                    "type": "tel",
+                    "error": ""
+                  })
+                  @@include('blocks/field-text/field-text.html', {
+                    "label": "Email",
+                    "required": "field-text__name--required",
+                    "type": "email",
+                    "error": ""
+                  })
+                  <label class="field-text">
+                    <span class="field-text__name field-text__name--required">Сообщение</span>
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" name="message"></textarea>
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+
+                  <div class="field-actions">
+                    <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+                    <button class="btn" type="submit">Отправить</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="contacts__img-col" role="presentation">
+
+                <div class="embed-responsive embed-responsive--4-3 contacts__img">
+                  <picture>
+                    <source srcset="img/contact-1-1.webp" media="(min-width: 1200px)" type="image/webp">
+                    <source srcset="img/contact-1-1.jpg" media="(min-width: 1200px)">
+                    <!-- 330x248 -->
+                    <source srcset="img/contact-1-1.webp" media="(min-width: 480px)" type="image/webp">
+                    <source srcset="img/contact-1-1.jpg" media="(min-width: 480px)">
+                    <!-- 640x480 -->
+                    <source srcset="img/contact-1-1.webp" type="image/webp">
+                    <img src="img/contact-1-1.jpg" alt="Описание" width="480" height="360" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+
+                <div class="embed-responsive embed-responsive--4-3 contacts__img">
+                  <picture>
+                    <source srcset="img/contact-1-2.webp" media="(min-width: 1200px)" type="image/webp">
+                    <source srcset="img/contact-1-2.jpg" media="(min-width: 1200px)">
+                    <!-- 330x248 -->
+                    <source srcset="img/contact-1-2.webp" media="(min-width: 480px)" type="image/webp">
+                    <source srcset="img/contact-1-2.jpg" media="(min-width: 480px)">
+                    <!-- 640x480 -->
+                    <source srcset="img/contact-1-2.webp" type="image/webp">
+                    <img src="img/contact-1-2.jpg" alt="Описание" width="480" height="360" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+
+                <div class="embed-responsive contacts__img-wide">
+                  <picture>
+                    <source srcset="img/contact-wide.webp" media="(min-width: 480px)" type="image/webp">
+                    <source srcset="img/contact-wide.jpg" media="(min-width: 480px)">
+                    <!-- 645x363 -->
+                    <source srcset="img/contact-wide.webp" type="image/webp">
+                    <img src="img/contact-wide.jpg" alt="Описание" width="480" height="270" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+
+              </div>
+            </div>
+
+          </section>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mobile-menu/mobile-menu.html')
+
+  </div>
+
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

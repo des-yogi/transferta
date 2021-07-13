@@ -39,7 +39,7 @@ $link-color:                  $main-color;
 $link-color--hover:           $main-color;
 
 $border-color:                $text-muted;
-$divider-color:               $text-muted;
+$divider-color:               $gray-lighter;
 // Базовая типографика
 
 $font-size:                   16px;
@@ -86,12 +86,12 @@ $grid-gutter-width:           64px;
 
 // Разное
 
-$field-padding-vertical:      12px;
+$field-padding-vertical:      11px;
 $field-padding-horizontal:    16px;
 
 $border-radius:               4px;
 $border-radius-xl:            8px;
-$opacity:                     0.7;
+$opacity:                     0.6;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 $transition-time:             0.25s;
 

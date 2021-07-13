@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Страница не найдена. Ошибка 404</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+
+        <header class="container page-header">
+          <div class="page-header__inner">
+            <div class="row">
+              <div class="page-header__logo-col">
+                @@include('blocks/logo/logo.html', {
+                  "location": "logo--header logo--noindex"
+                })
+              </div>
+              <div class="page-header__menu-col">
+                <div class="page-header__service-menu">
+                  <ul class="list-nostyled  page-header__tel-list">
+                    <li class="page-header__tel-item">
+                      <a href="tel:+380443624757" class="page-header__tel-link">+38 (044) 362-47-57</a>
+                    </li>
+                    <li class="page-header__tel-item">
+                      <a href="tel:+380688529566" class="page-header__tel-link">+38 (068) 852-95-66</a>
+                    </li>
+                  </ul>
+                  @@include('blocks/lang-switcher/lang-switcher.html', {
+                    "location": "lang-switcher--header"
+                  })
+                  <button id="main-nav-toggler" class="burger" aria-label="Переключатель мобильного меню" aria-controls="mobile-menu"><span></span></button>
+                </div>
+                @@include('blocks/main-nav/main-nav.html', {
+                  "location": "main-nav--header main-nav--noindex"
+                })
+              </div>
+            </div>
+          </div>
+        </header>
+
+      </div>
+
+      <main>
+
+        <div class="container  page-404">
+
+          <div class="page-404__row">
+
+            <div class="page-404__text">
+              <div class="page-404__text-inner">
+                <h1>Страница не найдена или не существует…</h1>
+                <p class="h4">Похоже, не удалось найти страницу, которую вы ищете</p>
+                <a href="index.html" class="btn">На главную</a>
+              </div>
+            </div>
+
+            <div class="page-404__img" role="presentation">
+              <img src="img/img-404.svg" alt="Ошибка 404" width="380" height="323">
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mobile-menu/mobile-menu.html')
+
+  </div>
+
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
