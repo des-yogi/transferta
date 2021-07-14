@@ -61,3 +61,18 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
       selector: '.b-lazy'
   });
 }());
+
+(function(){
+  const selectArr = document.querySelectorAll('.field-select__select');
+  if (!selectArr) { return; }
+
+  selectArr.forEach(function (selectEl) {
+    const optionArr = selectEl.options;
+    for (let i = 0; i <= optionArr.length; i++) {
+      if (optionArr[i]) {
+        optionArr[i].style = 'font-weight:500;' +
+                             'background-color:rgba(21,40,47,0.85);';
+      }
+    }
+  });
+}());

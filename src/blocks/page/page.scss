@@ -322,6 +322,44 @@ a {
   @include col(md, 4);
 }
 
+.col-1-1-1 {
+  @include col(xs, 12, $grid-columns, 30px);
+  @include col(md, 8);
+  //@include col(xl, 8);
+  margin-bottom: 24px;
+}
+
+.col-1-1-2 {
+  @include col(xs, 12, $grid-columns, 30px);
+  @include col(md, 8);
+  @include col(xl, 6);
+  margin-bottom: 24px;
+}
+
+.col-1-2-2 {
+  @include col(xs, 12, $grid-columns, 30px);
+  @include col(md, 6);
+  @include col(xl, 6);
+  margin-bottom: 24px;
+}
+
+.col-1-2-3 {
+  @include col(xs, 12, $grid-columns, 30px);
+  @include col(md, 6);
+  @include col(xl, 4);
+  margin-bottom: 24px;
+}
+
+.col-1-1-1,
+.col-1-1-2,
+.col-1-2-2,
+.col-1-2-3 {
+
+  .field-text {
+    margin-bottom: 16px;
+  }
+}
+
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 

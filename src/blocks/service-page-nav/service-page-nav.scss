@@ -1,0 +1,41 @@
+.service-page-nav {
+  position: sticky;
+  top: 24px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin: 0;
+    padding: 0 24px 16px;
+  }
+
+  &__item {
+    margin-bottom: 2px;
+
+    &.active {
+
+      #{$block-name}__link {
+        color: $white;
+        background-color: $link-color;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 16px 24px;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    text-decoration: none !important;
+    white-space: nowrap;
+    color: $text-color;
+    background-color: $bg-light;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $link-color;
+    }
+  }
+}

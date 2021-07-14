@@ -1,0 +1,53 @@
+.service-page {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text-wrapper {
+    padding-top: 32px;
+    padding-bottom: 48px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 56px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 10);
+    @include col(xl, 8);
+  }
+
+  &__nav-col {
+    @include col(xl, 4);
+
+    @media (max-width: $screen-xl - 1) {
+      display: none;
+    }
+  }
+
+  &__text {
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__form-wrapper {
+    padding-top: 32px;
+    padding-bottom: 64px;
+    background-color: $secondary-color;
+    border-bottom: 1.5px solid rgba($bg-light, 0.15);
+
+    @media (min-width: $screen-md) {
+      padding-top: 56px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 92px;
+    }
+  }
+}
