@@ -41,7 +41,10 @@
     "field-text": [],
     "field-checkbox": [],
     "field-actions": [],
-    "field-select": []
+    "field-select": [],
+    "service-page": [],
+    "service-page-nav": [],
+    "service-form": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

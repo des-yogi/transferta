@@ -10,7 +10,7 @@ $border-radius:               3px !default;
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: ($line-height / 2);
+  //margin-bottom: ($line-height / 2);
 
   &__name {
     @include field-name;
@@ -26,20 +26,21 @@ $border-radius:               3px !default;
     width: 100%;
     line-height: $line-height;
     padding: $field-padding-vertical $field-padding-horizontal;
-    font-size: inherit;
+    font-size: 1em;
     font-family: inherit;
-    border: 1px solid $border-color;
+    color: $white;
+    border: 1px solid transparent;
     border-radius: $border-radius;
     appearance: none;
-    background-color: #fff;
-    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg');
+    background-color: rgba($text-muted, 0.25);
+    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$white);
     background-repeat: no-repeat;
-    background-position: right 0.3em center;
-    background-size: 1.063em 0.688em;
+    background-position: right 12px center;
+    background-size: 12px 7px;
 
     &[multiple] {
       background-image: none;
-      min-height: 6.8em;
+      min-height: 5.2em;
     }
 
     &::-ms-expand {
@@ -54,7 +55,8 @@ $border-radius:               3px !default;
     &[disabled],
     &[readonly] {
       cursor: default;
-      background-color: $gray-lightest;
+      color: $text-muted;
+      background-color: rgba($text-muted, 0.1);
     }
   }
 

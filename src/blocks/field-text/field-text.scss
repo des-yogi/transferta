@@ -21,15 +21,19 @@ $border-radius:               3px !default;
     @include field-name;
 
     &--required {
-      position: relative;
 
-      &::after {
-        display: block;
-        content: "*";
-        position: absolute;
-        top: 0;
-        right: -16px;
-        color: $main-color;
+      span {
+        position: relative;
+        margin-left: 18px;
+
+        &::after {
+          display: block;
+          content: "*";
+          position: absolute;
+          top: 0;
+          right: 0;
+          color: $main-color;
+        }
       }
     }
   }
