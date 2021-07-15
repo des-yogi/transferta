@@ -44,7 +44,8 @@
     "field-select": [],
     "service-page": [],
     "service-page-nav": [],
-    "service-form": []
+    "service-form": [],
+    "field-radio": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
