@@ -32,6 +32,11 @@
     text-decoration: none;
     border-radius: 8px;
     user-select: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 
   &--header {

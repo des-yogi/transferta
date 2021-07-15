@@ -17,13 +17,13 @@
   &__title-col {
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 12);
-    @include col(xl, 6);
+    @include col(xl, 7);
   }
 
   &__breadcrumbs-col {
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 12);
-    @include col(xl, 6);
+    @include col(xl, 5);
 
     @media (min-width: $screen-xl) {
       display: flex;
@@ -34,9 +34,32 @@
   }
 
   &__title {
+    display: flex;
+    align-items: center;
 
-      @media (min-width: $screen-xl) {
-        margin-bottom: 0;
-      }
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    color: $white;
+    background-color: $main-color;
+    border-radius: $border-radius-xl;
+
+    @media (max-width: $screen-md - 1) {
+      display: none;
+    }
+
+    // @media (min-width: $screen-xl) {
+    //   width: 48px;
+    //   height: 48px;
+    // }
   }
 }
