@@ -1,17 +1,17 @@
 <!--DEV
 @ @include('blocks/faq/faq.html')
 -->
-<article id="faq-accordion" class="accordion  faq">
+<article id="faq-accordion" class="accordion  faq" itemscope itemtype="https://schema.org/FAQPage">
 
   <h2 class="faq__title">Faq</h2>
   <div class="faq__intro">
     <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы.</p>
   </div>
 
-  <div class="faq__item">
+  <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 
     <div class="faq__item-header" id="headingOne">
-      <h3 class="faq__item-title">
+      <h3 class="faq__item-title" itemprop="name">
         <button class="faq__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           <span class="faq__btn-text">Заголовок #1</span>
           <span class="faq__btn-icon"><span></span></span>
@@ -19,8 +19,8 @@
       </h3>
     </div>
 
-    <div id="collapseOne" class="faq__collapse  collapse " aria-labelledby="headingOne" data-parent="#faq-accordion">
-      <div class="faq__item-body">
+    <div id="collapseOne" class="faq__collapse  collapse" aria-labelledby="headingOne" data-parent="#faq-accordion" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="faq__item-body" itemprop="text">
         <p>
           Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы.
         </p>
@@ -31,10 +31,10 @@
     </div>
   </div>
 
-  <div class="faq__item">
+  <div class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 
     <div class="faq__item-header" id="headingTwo">
-      <h3 class="faq__item-title">
+      <h3 class="faq__item-title" itemprop="name">
         <button class="faq__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           <span class="faq__btn-text">Заголовок #2</span>
           <span class="faq__btn-icon"><span></span></span>
@@ -42,8 +42,8 @@
       </h3>
     </div>
 
-    <div id="collapseTwo" class="faq__collapse  collapse" aria-labelledby="headingTwo" data-parent="#faq-accordion">
-      <div class="faq__item-body">
+    <div id="collapseTwo" class="faq__collapse  collapse" aria-labelledby="headingTwo" data-parent="#faq-accordion" aria-labelledby="headingOne" data-parent="#faq-accordion" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="faq__item-body" itemprop="text">
         <p>
           Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы.
         </p>
