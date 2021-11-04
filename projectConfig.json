@@ -45,7 +45,8 @@
     "service-page": [],
     "service-page-nav": [],
     "service-form": [],
-    "field-radio": []
+    "field-radio": [],
+    "faq": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -57,6 +58,8 @@
   ],
   "singleCompiled": [],
   "addJsBefore": [
+    "./node_modules/bootstrap/js/dist/util.js",
+    "./node_modules/bootstrap/js/dist/collapse.js",
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/blazy/blazy.min.js",
     "./node_modules/flickity/dist/flickity.pkgd.min.js",
@@ -69,7 +72,9 @@
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
   ],
   "copiedCss": [],
-  "copiedJs": [],
+  "copiedJs": [
+    "./node_modules/jquery/dist/jquery.min.js"
+  ],
   "dirs": {
     "srcPath": "./src/",
     "buildPath": "./build/",
