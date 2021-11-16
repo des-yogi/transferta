@@ -153,6 +153,13 @@
     row-gap: 16px;
   }
 
+  &__nav-item {
+
+    &.active {
+      color: $main-color;
+    }
+  }
+
   &__copyrights {
     padding: 24px 0;
     border-top: 1.5px solid $white;
