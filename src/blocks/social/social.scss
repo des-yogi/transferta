@@ -38,10 +38,10 @@
   &--banner {
     align-items: center;
     justify-content: center;
-    margin-top: auto;
 
     @media (min-width: $screen-md) {
       flex-direction: column;
+      justify-content: flex-start;
     }
 
     #{$block-name}__item {
