@@ -53,6 +53,10 @@
   border-bottom-left-radius: $border-radius;
   background-color: $color-danger;
 
+  // & > .error {
+  //   color: $white !important;
+  // }
+
   &::before {
     display: inline-block;
     vertical-align: middle;
@@ -82,7 +86,7 @@
 @mixin field-name {
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 1.2em;
+  margin-bottom: 0.5em;
   line-height: $line-height;
   font-size: 18px;
   font-weight: 700;
