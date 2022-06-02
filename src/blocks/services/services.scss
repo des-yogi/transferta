@@ -36,6 +36,10 @@
     @include col(md, 6, $grid-columns, 8px);
     @include col(xl, 4, $grid-columns, 8px);
     margin-bottom: 8px;
+
+    &--half-size {
+      @include col(xl, 6, $grid-columns, 8px);
+    }
   }
 
   &__title {
